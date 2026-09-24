@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LAWKHOWA SAMABAI SAMITI LTD.</title>
+
+  <meta name="description"
+    content="Official website of LAWKHOWA SAMABAI SAMITI LTD., Singimari, Nagaon, Assam.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fa;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0b2345;
+      color: white;
+      padding: 18px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.12);
+    }
+
+    .header-inner {
+      max-width: 1150px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: white;
+      color: #0b2345;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 17px;
+    }
+
+    .brand h1 {
+      font-size: 16px;
+      letter-spacing: 0.4px;
+    }
+
+    .brand p {
+      font-size: 12px;
+      color: #cbd8ea;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #7ed6a5;
+    }
+
+    .hero {
+      background:
+        linear-gradient(rgba(5,22,46,0.82), rgba(5,22,46,0.82)),
+        linear-gradient(135deg, #164d7a, #0b2345);
+      color: white;
+      padding: 85px 20px;
+    }
+
+    .hero-inner {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .hero h2 {
+      font-size: clamp(32px, 6vw, 56px);
+      line-height: 1.12;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 span {
+      color: #72d49a;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #d8e4f2;
+      font-size: 17px;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 21px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+
+    .btn-primary {
+      background: #35a86b;
+      color: white;
+    }
+
+    .btn-light {
+      background: white;
+      color: #0b2345;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 15px;
+      padding: 28px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-card h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .hero-card p {
+      margin: 8px 0;
+      font-size: 14px;
+    }
+
+    section {
+      padding: 70px 20px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+      color: #102b50;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #667085;
+    }
+
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+    }
+
+    .info-box {
+      background: #f7f9fc;
+      border-left: 4px solid #35a86b;
+      padding: 25px;
+      border-radius: 8px;
+    }
+
+    .info-box h3 {
+      color: #102b50;
+      margin-bottom: 10px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 13px;
+      padding: 28px 22px;
+      box-shadow: 0 8px 25px rgba(20,40,70,0.08);
+      border: 1px solid #e7ebf0;
+    }
+
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 10px;
+      background: #e8f6ee;
+      color: #218452;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      color: #102b50;
+      margin-bottom: 9px;
+    }
+
+    .card p {
+      color: #667085;
+      font-size: 14px;
+    }
+
+    .members {
+      background: #f5f7fa;
+    }
+
+    .member-card {
+      text-align: center;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      background: #dce7f3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0b2345;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .member-role {
+      color: #35a86b;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .notice {
+      background: white;
+    }
+
+    .notice-list {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .notice-item {
+      background: #f7f9fc;
+      border: 1px solid #e3e8ef;
+      padding: 18px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+    }
+
+    .notice-item strong {
+      color: #102b50;
+    }
+
+    .contact {
+      background: #0b2345;
+      color: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+    }
+
+    .contact h2 {
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      color: #d6e1ef;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background: #07172e;
+      color: #b8c5d6;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 850px) {
+
+      nav {
+        display: none;
+      }
+
+      .hero-inner,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 550px) {
+
+      .hero {
+        padding: 65px 18px;
+      }
+
+      section {
+        padding: 55px 18px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .brand h1 {
+        font-size: 13px;
+      }
+
+      .brand p {
+        font-size: 10px;
+      }
+
+      .logo {
+        width: 42px;
+        height: 42px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+
+    <div class="brand">
+      <div class="logo">LS</div>
+
+      <div>
+        <h1>LAWKHOWA SAMABAI SAMITI LTD.</h1>
+        <p>Singimari, Nagaon, Assam</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#members">Members</a>
+      <a href="#staff">Staff</a>
+      <a href="#notices">Notices</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<section class="hero" id="home">
+
+  <div class="hero-inner">
+
+    <div>
+      <h2>
+        LAWKHOWA<br>
+        <span>SAMABAI SAMITI LTD.</span>
+      </h2>
+
+      <p>
+        Welcome to the official digital platform of
+        Lawkhowa Samabai Samiti Ltd. Access office
+        information, members, staff details and official notices
+        in one place.
+      </p>
+
+      <a href="#about" class="btn btn-primary">
+        Explore Office
+      </a>
+
+      <a href="#contact" class="btn btn-light">
+        Contact Office
+      </a>
+    </div>
+
+
+    <div class="hero-card">
+
+      <h3>Office Information</h3>
+
+      <p>📍 Singimari, Nagaon, Assam</p>
+
+      <p>🏢 Cooperative Society Office</p>
+
+      <p>📋 Official Information Portal</p>
+
+      <p>🔐 Secure Management System</p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="about" id="about">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>About Our Society</h2>
+      <p>Information about LAWKHOWA SAMABAI SAMITI LTD.</p>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="info-box">
+
+        <h3>Our Office</h3>
+
+        <p>
+          LAWKHOWA SAMABAI SAMITI LTD. is a cooperative
+          society serving its members and maintaining
+          organized office operations.
+        </p>
+
+      </div>
+
+
+      <div class="info-box">
+
+        <h3>Our Location</h3>
+
+        <p>
+          Singimari, Nagaon, Assam<br>
+          PIN: 782125
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="members">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Members</h2>
+
+      <p>
+        Official members information will be displayed here.
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+      <div class="card member-card">
+
+        <div class="avatar">M</div>
+
+        <h3>Member Name</h3>
+
+        <div class="member-role">
+          Member
+        </div>
+
+        <p>
+          Member information will be added
+          through the management system.
+        </p>
+
+      </div>
+
+
+      <div class="card member-card">
+
+        <div class="avatar">M</div>
+
+        <h3>Member Name</h3>
+
+        <div class="member-role">
+          Member
+        </div>
+
+        <p>
+          Member information will be added
+          through the management system.
+        </p>
+
+      </div>
+
+
+      <div class="card member-card">
+
+        <div class="avatar">M</div>
+
+        <h3>Member Name</h3>
+
+        <div class="member-role">
+          Member
+        </div>
+
+        <p>
+          Member information will be added
+          through the management system.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="members" id="staff">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Our Staff</h2>
+
+      <p>
+        Office staff information will be displayed here.
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+      <div class="card member-card">
+
+        <div class="avatar">S</div>
+
+        <h3>Staff Name</h3>
+
+        <div class="member-role">
+          Office Staff
+        </div>
+
+        <p>
+          Staff details will be managed
+          from the administration system.
+        </p>
+
+      </div>
+
+
+      <div class="card member-card">
+
+        <div class="avatar">S</div>
+
+        <h3>Staff Name</h3>
+
+        <div class="member-role">
+          Office Staff
+        </div>
+
+        <p>
+          Staff details will be managed
+          from the administration system.
+        </p>
+
+      </div>
+
+
+      <div class="card member-card">
+
+        <div class="avatar">S</div>
+
+        <h3>Staff Name</h3>
+
+        <div class="member-role">
+          Office Staff
+        </div>
+
+        <p>
+          Staff details will be managed
+          from the administration system.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="notice" id="notices">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>Official Notices</h2>
+
+      <p>
+        Important office announcements and documents.
+      </p>
+
+    </div>
+
+
+    <div class="notice-list">
+
+      <div class="notice-item">
+        <strong>Office Notice</strong>
+        <p>
+          Important notices and announcements
+          will appear here.
+        </p>
+      </div>
+
+
+      <div class="notice-item">
+        <strong>Documents</strong>
+        <p>
+          Office-related documents will be
+          added through the management system.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <div class="contact-grid">
+
+      <div>
+
+        <h2>Contact Office</h2>
+
+        <p>
+          LAWKHOWA SAMABAI SAMITI LTD.
+        </p>
+
+        <p>
+          Singimari, Nagaon, Assam
+        </p>
+
+        <p>
+          PIN: 782125
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h2>Office Portal</h2>
+
+        <p>
+          This website will provide a centralized
+          platform for office information,
+          members, staff, notices and documents.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <p>
+    © 2026 LAWKHOWA SAMABAI SAMITI LTD.
+    All Rights Reserved.
+  </p>
+
+  <p>
+    Official Digital Office Portal
+  </p>
+
+</footer>
+
+</body>
+      </html>
